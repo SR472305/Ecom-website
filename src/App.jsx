@@ -7,6 +7,7 @@ import Contact from './PAGE/Contact'
 import Login from './PAGE/Login'
 import Service from './PAGE/Service'
 import Register from './PAGE/Register'
+import NotFound from './page/NotFound'
 
 
 const App = () => {
@@ -21,7 +22,7 @@ const App = () => {
         {path:"/Contact", element:<Contact />    },
         {path:"/Login", element:<Login />    },
         {path:"/Register", element:<Register />    },
-        { path: '*', element: <Navigate to='/'/> }
+        { path: '*', element: <NotFound/> }
 
       ]
     }
