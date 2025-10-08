@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import Layout from './PAGE/Layout'
 import Home from './PAGE/Home'
 import About from './PAGE/About'
@@ -21,6 +21,8 @@ const App = () => {
         {path:"/Contact", element:<Contact />    },
         {path:"/Login", element:<Login />    },
         {path:"/Register", element:<Register />    },
+        { path: '*', element: <Navigate to='/'/> }
+
       ]
     }
   ])
