@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 import Layout from './PAGE/Layout'
 import Home from './PAGE/Home'
 import About from './PAGE/About'
@@ -11,18 +11,18 @@ import NotFound from './page/NotFound'
 
 
 const App = () => {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path :'/',
       element:<Layout />,
       children :[
-        {path:"/", element:<Home />    },
-        {path:"/About", element:<About />    },
-        {path:"/Service", element:<Service />    },
-        {path:"/Contact", element:<Contact />    },
-        {path:"/Login", element:<Login />    },
-        {path:"/Register", element:<Register />    },
-        { path: '*', element: <NotFound/> }
+        {path:"", element:<Home />    },
+        {path:"About", element:<About />    },
+        {path:"Service", element:<Service />    },
+        {path:"Contact", element:<Contact />    },
+        {path:"Login", element:<Login />    },
+        {path:"Register", element:<Register />    },
+        // { path: '*', element: <NotFound/> }
 
       ]
     }
